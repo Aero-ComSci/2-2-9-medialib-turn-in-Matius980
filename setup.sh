@@ -6,15 +6,9 @@ fi
 if [ -f Movie.java ]; then mv Movie.java src/main/java/ 
 fi
 
-if [ -f MediaLib.java ] ; then mv MediaLib.java src/main/java
-fi
 
 if [ -f BookTest.java ]; then mv BookTest.java src/test/java/ 
 fi
-
-if [ -f Song.java ]; then mv Song.java src/main/java/
-fi
-
 
 cat > build.gradle <<'EOF'
 plugins { id 'java' }
