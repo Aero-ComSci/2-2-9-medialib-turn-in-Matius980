@@ -7,11 +7,13 @@ public class MediaLibRunner
     MediaLib myLib = new MediaLib();
 
     Book myBook = new Book("The Lord of the Rings", "Tolkien", 3);
-    Book b = new Book("Curious George", "H.A. Rey and Margret Rey");
+    Book b = new Book("Curious George", "H.A. Rey and Margret Rey", 11);
     System.out.println("Book created: " + myBook);
 
     myBook.setRating(7);
+    b.setRating(9);
     myLib.addBook(myBook);
+    myLib.addBook(b);
 
     
     /*      Creation of new library with a new book
@@ -27,6 +29,14 @@ public class MediaLibRunner
 
     myMovie.setRating(4);
     myLib.addMovie(myMovie);
+    
+    /*
+     Lib.addMovie(myMovie);
+     Lib.addMovie(myMovie);
+    Lib.addMovie(myMovie);
+    */
+
+
 
     Song mySong = new Song("Sunshine", "Steve Lacy and Foushee", 4.54);
     System.out.println("Song created: " + mySong);
@@ -34,5 +44,9 @@ public class MediaLibRunner
 
     System.out.println("---------LIBRARY LIST---------");
     System.out.println(myLib);
+    System.out.println("Number of books: " + MediaLib.getNumBooks());
+    System.out.println("Number of movies: " + MediaLib.getNumMovies());
+    System.out.println("Number of songs: " + MediaLib.getNumSongs());
+    System.out.println("Total entries in library: " + MediaLib.getNumEntries());
   }
 }
