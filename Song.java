@@ -1,3 +1,4 @@
+
 import java.util.Objects;
 
 public class Song {
@@ -33,6 +34,20 @@ public class Song {
 
     public void setDuration(double duration) {
         this.duration = duration;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Song song = (Song) o;
+        return Objects.equals(this.name, song.name)
+            && Objects.equals(this.author, song.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.name, this.author);
     }
     
 
